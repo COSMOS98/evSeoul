@@ -1,0 +1,140 @@
+/* 검색폼 */
+.tableTop{
+    width: 100%; 
+    height: 30px;
+    margin-bottom: 20px;
+}
+#boardForm, 
+#searchForm{
+    float: right; 
+    height: 30px; 
+    line-height: 30px;
+}
+#findSelect{
+    width: 100px; 
+    height: 30px;
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+#searchBox{	
+    width: 200px; 
+    height: 30px; 
+    padding: 0 10px;
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+#searchBtn{	  
+    width: 60px; 
+    height: 30px; 
+    border: none;
+    background-color: #024638; 
+    color: #fff;
+}
+#searchBtn:hover{
+	background-color: #097745;
+}
+
+.dicBox{
+    width: 100%; 
+    overflow: hidden;
+    padding: 29px; 
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+/* 질문 */
+.dicBox dt{
+    width: 100%; 
+    height: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.dicBox dt a{
+    position: relative;
+    display: block;
+    width: 100%; 
+    height: 100%;
+    padding: 0 10px; 
+    box-sizing: border-box;
+    font-size: 16px; 
+    line-height: 48px;
+    left: 10px;
+}
+.dicBox dt a:before{
+    position: relative; 
+    top: 3px;
+    margin-right: 20px;
+}
+.dicBox dt a:after{
+    position: absolute; 
+    top: 4px; 
+    right: 20px; 
+    content: url(../../images/customer/faq_btn_out.gif);
+}
+
+/* 답변 */
+.dicBox dd{
+    width: 100%; max-height: 0; 
+    overflow: hidden; 
+    padding: 0; 
+    box-sizing: border-box;
+    background-color: #f6f6f6; 
+    margin-bottom: 10px;
+    font-size: 16px; 
+    line-height: 24px;
+    background-repeat: no-repeat;
+    background-position: 10px 20px;
+}
+.dicBox dt.active a{ 
+    font-weight: bold;
+}
+.dicBox dt.active a:after{ 
+    content: url(../../images/customer/faq_btn_active.gif);
+}
+.dicBox dt.active + dd{ 
+    display: block; 
+    max-height: 102px; 
+    padding: 15px 30px; 
+    border: 1px solid #ccc; 
+    border-top: none; 
+    transition: max-height 0.2s ease-out; 
+}
+
+.dicBox p{
+	padding: 100px 0;
+	font-size: 16px; 
+	text-align: center;
+}
+
+.pageBtn{
+    position: relative; 
+    width: 100%; 
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.pageBtn .pageNum{
+    width: 310px;  
+    height: 40px;
+    text-align: center; 
+    line-height: 40px;
+    margin: 0 auto;
+}
+.pageBtn .pageNum a{ 
+	margin: 0 2px;
+	font-size: 16px;
+	float: left;
+    width: 40px; 
+    height: 40px;
+} 
+.pageBtn .pageNum span{ 
+	margin: 0 2px;
+	font-size: 16px;
+	float: left;
+    width: 40px; 
+    height: 40px;
+ 	font-weight: 700;
+ 	box-sizing: border-box;
+ 	color: #024638;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MarkDAO">
+	<insert id="insertMark">
+		insert into EV_STAT(no, name, close, open_time, close_time, type, normal, fast, fare, address1, address2, company, tel, lat, lon )
+	
+	</insert>
+	
+	<select id="getMarkList" resultType="com.evseoul.biz.mark.MarkVO">
+		select * from EV_STAT
+	</select>
+	
+	<select id="getMark" resultType="com.evseoul.biz.mark.MarkVO">
+		select NO, NAME, LAT, LON from EV_STAT where address2 like '%'||#{getMark}||'%'
+<!-- 		select * from EV_STAT -->
+	</select>
+	
+	<select id="getMapDetail" resultType="com.evseoul.biz.mark.MarkVO">
+		select * from EV_STAT where NO=#{NO}
+	</select>
+
+</mapper>

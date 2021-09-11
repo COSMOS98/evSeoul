@@ -1,0 +1,63 @@
+/* weather */
+#weatherWrap {
+	width: 1080px;
+	height: 330px;
+	box-sizing: border-box;
+	margin: 30px auto;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#weatherWrap .sliderWrap {
+	width: 100%;
+	height: 270px;
+	box-sizing: border-box;
+}
+#weatherWrap .swiper-container {
+	width: 100%;
+	height: 270px;
+	margin: 30px 0;
+	box-sizing: border-box;
+}
+#weatherWrap .swiper-slide {
+	width: 100px;
+	height: 200px;
+	padding: 0px 10px;
+	box-sizing: border-box;
+	text-align: center;
+	border-right: 1px solid #EAEAEA;
+	margin-top: 5px;
+}
+#weatherWrap .swiper-slide img {
+	width: 100%;
+}
+#weatherWrap .swiper-slide h3 {
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+#weatherWrap .swiper-slide p {
+	opacity: 0;
+}
+#weatherWrap .swiper-slide .title {
+	color: #999;
+}
+
+#weatherWrap .swiper-button-next:after,
+#weatherWrap .swiper-button-prev:after {
+  content: "";
+}
+#weatherWrap .swiper-button-next {  
+  right: 5px;
+  width: 150px;
+  height: 40px;
+  margin-top: 0;
+  background-image: url(../../images/evSearch/weather_next_btn.png);
+  top: 225px;
+}
+#weatherWrap .swiper-button-prev {	
+  left: 5px;
+  width: 150px;
+  height: 40px;
+  margin-top: 0;
+  background-image: url(../../images/evSearch/weather_prev_btn.png);
+  top: 225px;
+}

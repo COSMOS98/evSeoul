@@ -1,0 +1,216 @@
+/* notice */
+.boardList{ 
+	width: 100%; 
+	margin-bottom: 50px; 
+}
+.boardList caption{ 
+	position: absolute; 
+	left: -999em; 
+}
+#subContents .boardList th, 
+#subContents .boardList td{ 
+	border-right: none; 
+	border-left: none; 
+}
+#subContents .boardList tr > td:nth-child(2){ 
+	text-align: left; 
+	width: 600px; 
+	line-height: 25px; 
+}
+#subContents .boardList tr > td:nth-child(2) a{
+    display: block; 
+    width: 500px; 
+    height: 25px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+#subContents .boardList tr > td:nth-child(2) a:hover {
+	color: #024638;
+}
+
+.pageBtn{
+    position: relative;
+    width: 100%; 
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.pageBtn .pageNum{
+    width: 310px;
+    height: 40px;
+    text-align: center; 
+    line-height: 40px;
+    margin: 0 auto;
+}
+.pageBtn .pageNum a{ 
+	margin: 0 2px;
+	font-size: 16px;
+	float: left;
+    width: 40px; 
+    height: 40px;
+} 
+.pageBtn .pageNum span{ 
+	margin: 0 2px;
+	font-size: 16px;
+	float: left;
+    width: 40px; 
+    height: 40px;
+ 	font-weight: 700;
+ 	box-sizing: border-box;
+ 	color: #024638;
+}
+.pageBtn .btnWrap{
+    position: absolute; 
+    top: 0; 
+    right: 0;
+}
+.pageBtn .btnWrap .listBtn{
+    display: inline-block;
+    width: 80px; 
+    height: 40px;
+    border: 1px solid #024638; 
+    box-sizing: border-box;
+    color: #024638; 
+    text-align: center; 
+    line-height: 38px;
+}
+.pageBtn .btnWrap .writeBtn{
+    display: inline-block;
+    width: 80px; 
+    height: 40px;
+    background-color: #024638;
+    color: #fff; 
+    text-align: center; 
+    line-height: 40px;
+}
+.pageBtn .btnWrap .writeBtn:hover{
+     background-color: #097745;
+}
+
+
+/* noticeDetail */
+.boardView{ 
+	width: 100%; 
+	margin-bottom: 50px; 
+}
+.boardView caption{ 
+	position: absolute; 
+	left: -999em; 
+}
+#subContents .boardView{ border-top: 2px solid #024638; }
+#subContents .boardView th{ 
+	border: 1px solid #ccc; 
+	width: 150px;
+}
+#subContents .boardView .noticeTitle,
+#subContents .boardView .noticeWriter {
+	text-align: left;
+	width: 460px;
+}
+#subContents .boardView td.substance{ 
+	white-space: pre-line;
+	text-align: left; 
+	vertical-align: top;
+	padding: 20px;
+}
+.boardView + .pageBtn .btnWrap{
+    width: 100%; 
+    text-align: center;
+}
+
+.pageBtn .btnWrap .modifyBtn{
+    display: inline-block;
+    width: 80px; 
+    height: 40px;
+    background-color: #024638;
+    color: #fff; 
+    text-align: center; 
+    line-height: 40px;
+} 
+.pageBtn .btnWrap .modifyBtn:hover{
+	background-color: #097745;
+}
+.pageBtn .btnWrap .deleteBtn{
+    display: inline-block;
+    width: 80px; 
+    height: 40px;
+    background-color: #db7b51;
+    color: #fff; 
+    text-align: center; 
+    line-height: 40px;
+} 
+.pageBtn .btnWrap .deleteBtn:hover{
+	background-color: #b45025;
+}
+
+
+/* noticeWrite */
+#subContents .boardWrite{
+    width: 100%; 
+    margin-bottom: 50px;
+    border-top: 2px solid #024638;
+}
+#subContents .boardWrite caption{ 
+	position: absolute; 
+	left: -999em; 
+}
+#subContents .boardWrite th{ 
+	border: 1px solid #ccc; 
+	width: 150px;
+}
+#subContents .boardWrite label{ font-size: 16px; }
+#subContents .boardWrite th label{ 
+	font-size: 18px; 
+	color: #333; 
+}
+#subContents .boardWrite td{ text-align: left; }
+#boardTitle{ 
+	width: 100%; 
+	height: 40px; 
+	border: 1px solid #ccc; 
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+#boardContent{ 
+	width: 100%; 
+	border: 1px solid #ccc; 
+	box-sizing: border-box; 
+	border-radius: 5px;
+	resize: none !important;
+	padding: 0 10px;
+}
+
+.boardWrite + .pageBtn .btnWrap{ 
+	width: 100%; 
+	text-align: center; 
+}
+.pageBtn .btnWrap .submitBtn{
+    display: inline-block;
+    width: 80px; 
+    height: 40px;
+    background-color: #024638;
+    color: #fff; 
+    text-align: center; 
+    line-height: 40px;
+}
+.pageBtn .btnWrap .submitBtn:hover{
+	background-color: #097745;
+}
+
+
+.pageBtn .btnWrap .submitBtn{
+    display: inline-block;
+    width: 80px; 
+    height: 40px;
+    background-color: #024638;
+    color: #fff; 
+    text-align: center; 
+    line-height: 40px;
+    border: 0px;
+}
+.pageBtn .btnWrap .submitBtn:hover{
+	background-color: #097745;
+}

@@ -1,0 +1,107 @@
+/* 검색폼 */
+.tableTop{
+    width: 100%; 
+    height: 30px;
+    margin-bottom: 20px;
+}
+#boardForm{
+    float: right;
+    height: 30px; 
+    line-height: 30px;
+}
+#findSelect{
+    width: 100px; 
+    height: 30px;
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+#searchBox{
+    width: 200px; 
+    height: 30px; 
+    padding: 0 10px;
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+#searchBtn{
+    width: 60px; 
+    height: 30px; 
+    border: none;
+    background-color: #024638; 
+    color: #fff;
+}
+#searchBtn:hover{
+	background-color: #097745;
+}
+
+.faqBox{
+    width: 100%; 
+    overflow: hidden;
+    padding: 29px; 
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+/* 질문 */
+.faqBox dt{
+    width: 100%; 
+    height: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.faqBox dt a{
+    position: relative; 
+    display: block;
+    width: 100%; 
+    height: 100%;
+    padding: 0 10px; 
+    box-sizing: border-box;
+    font-size: 16px; 
+    line-height: 48px;
+}
+.faqBox dt a:before{
+    position: relative; 
+    top: 3px;
+    content: url(../../images/customer/faq_text_q.gif); 
+    margin-right: 20px;
+}
+.faqBox dt a:after{
+    position: absolute; 
+    top: 4px; 
+    right: 10px; 
+    content: url(../../images/customer/faq_btn_out.gif);
+}
+
+/* 답변 */
+.faqBox dd{
+    width: 100%; 
+    max-height: 0;
+    overflow: hidden; 
+    padding: 0; 
+    box-sizing: border-box;
+    background-color: #f6f6f6; 
+    margin-bottom: 10px;
+    font-size: 16px; 
+    line-height: 24px;
+    background-image: url(../../images/customer/faq_text_a.gif);
+    background-repeat: no-repeat;
+    background-position: 10px 20px;
+}
+.faqBox dt.active a{ 
+    font-weight: bold;
+}
+.faqBox dt.active a:after{ 
+    content: url(../../images/customer/faq_btn_active.gif);
+}
+.faqBox dt.active + dd{ 
+    display: block; 
+    max-height: 102px; 
+    padding: 15px 45px; 
+    border: 1px solid #ccc; 
+    border-top: none; 
+    transition: max-height 0.2s ease-out; 
+}
+.faqBox p{
+	padding: 100px 0;
+	font-size: 16px; 
+	text-align: center;
+}

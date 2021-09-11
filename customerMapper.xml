@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.evseoul.biz.repository.CustomerMapper">
+	<!-- notice -->
+	<select id="getNoticeListPaging" parameterType="com.evseoul.biz.dto.Criteria" resultType="com.evseoul.biz.dto.BoardDTO">
+		<![CDATA[		
+		SELECT SEQ, TITLE, CONTENT, WRITER, REGDATE, CNT FROM 
+		(
+	    	SELECT ROWNUM AS RN, A.*
+		    FROM (
+	        	SELECT * FROM NOTICE_TBL
+		        WHERE 1=1
+		        ORDER BY SEQ DESC
+		        ) A 
+		) WHERE RN BETWEEN ((#{pageNum}-1)*#{amount}+1) AND (#{pageNum}*#{amount})
+		]]>
+	</select>
+	<select id="getNoticeListCnt" parameterType="com.evseoul.biz.dto.Criteria" resultType="int">
+		<![CDATA[
+		SELECT count(SEQ) FROM NOTICE_TBL 
+		WHERE SEQ > 0
+		]]>
+	</select>
+	
+	<select id="getNoticeDetail" parameterType="com.evseoul.biz.dto.BoardDTO" resultType="com.evseoul.biz.dto.BoardDTO">
+		SELECT * FROM NOTICE_TBL WHERE SEQ=#{SEQ}
+	</select>
+	
+	<insert id="insertNotice" parameterType="com.evseoul.biz.dto.BoardDTO">
+		INSERT INTO NOTICE_TBL(SEQ, TITLE, CONTENT, WRITER, REGDATE)
+		VALUES(NOTICE_SEQ.NEXTVAL, #{TITLE}, #{CONTENT}, #{WRITER}, SYSDATE)
+	</insert>
+	
+	<update id="updateNotice" parameterType="com.evseoul.biz.dto.BoardDTO">
+		<![CDATA[
+			UPDATE NOTICE_TBL SET TITLE=#{TITLE}, CONTENT=#{CONTENT} 
+			WHERE SEQ=#{SEQ}
+		]]>
+	</update>
+	
+	<delete id="deleteNotice" parameterType="com.evseoul.biz.dto.BoardDTO">
+		<![CDATA[
+			DELETE NOTICE_TBL WHERE SEQ=#{SEQ}
+		]]>
+	</delete>
+	
+	<update id="updateNoticeCnt" parameterType="com.evseoul.biz.dto.BoardDTO">
+		<![CDATA[
+			UPDATE NOTICE_TBL SET CNT=CNT+1 WHERE SEQ=#{SEQ}
+		]]>
+	</update>
+	
+	<!-- search -->
+	<sql id="criteria">
+		<if test="type == 'T'.toString()">
+			and title like '%'||#{keyword}||'%'
+		</if>
+		<if test="type == 'C'.toString()">
+			and content like '%'||#{keyword}||'%'
+		</if>
+		<if test="type == 'TC'.toString()">
+			and (title like '%'||#{keyword}||'%' OR content like '%'||#{keyword}||'%')
+		</if>
+	</sql>
+	
+	<!-- FAQ -->
+	<select id="getFaqListPaging" parameterType="com.evseoul.biz.dto.PostDTO" resultType="com.evseoul.biz.dto.PostDTO">
+		<![CDATA[	
+		SELECT SEQ, TITLE, CONTENT FROM 
+		(
+	    	SELECT ROWNUM AS RN, A.*
+		    FROM (
+	        	SELECT * FROM FAQ_TBL
+		        WHERE 1=1
+		]]>
+		<include refid="criteria"></include>
+		<![CDATA[	      
+		        ORDER BY SEQ ASC
+		        ) A 
+		) WHERE RN BETWEEN ((#{pageNum}-1) * #{amount}+1) AND (#{pageNum} * #{amount})		
+		]]>
+		
+	</select>
+	<select id="getFaqListCnt" parameterType="com.evseoul.biz.dto.Criteria" resultType="int">
+		<![CDATA[
+		SELECT count(SEQ) FROM FAQ_TBL 
+		WHERE 1=1
+		]]>
+		<include refid="criteria"></include>
+	</select>
+</mapper>

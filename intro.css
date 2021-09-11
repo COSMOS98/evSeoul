@@ -1,0 +1,104 @@
+/* intro */
+.introWrap ul {
+	float: left;
+	width: 1080px;;
+	height: 100%;
+}
+.introWrap li {
+	float: left;
+}
+.introWrap li.introContent {
+	padding: 20px 30px;
+	width: 530px;
+	height: 330px;
+}
+.introWrap li.introImg {
+	width: 480px;
+	height: 350px;
+	vertical-align: middle;
+	padding-top: 20px;
+}
+
+.introContent span {
+	color: #033891;
+	font-size: 18px;
+	font-weight: 700;
+}
+.introContent p {
+	color: #000;
+	font-size: 18px;
+}
+
+
+/* effect */
+.effectWrap {
+	width: 800px;
+	margin: 0 auto;
+}
+.effectWrap img {
+	width: 800px;
+}
+
+
+/* evData */
+.evDataContents {
+	width: 1080px;
+	overflow: hidden;
+	padding-bottom: 200px;
+	margin: 0 auto;
+}
+.evDataContents h3 {
+  width: 90%;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+  color: #024638;
+  font-size: 23px;
+}
+
+.evDataContents table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 90%; 
+	margin-bottom: 50px; 
+	text-align: center;
+}
+.evDataContents tr:first-child {
+	border-top: 2px solid #024638
+}
+.evDataContents th {
+	padding: 10px;
+	background-color: #ededed;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	color: #333;
+	width: 150px;
+}
+.evDataContents th.type {
+	border-top: 1px solid #ccc;
+	background-color: transparent;
+}
+.evDataContents td {
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: left;
+	font-size: 15px;
+	color: #666;
+	width: 450px;
+}
+.evDataContents tr > *:first-child {
+	border-left: none;
+}
+.evDataContents tr > *:last-child {
+	border-right: none;
+}
+
+.evDataContents img {
+	margin: 0 auto;
+	width: 150px;
+}
+
+.boardList caption{ 
+	position: absolute; 
+	left: -999em; 
+}
